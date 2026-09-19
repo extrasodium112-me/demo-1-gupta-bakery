@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gupta Bakery — Fresh cakes, bread &amp; snacks in Dr. Ambedkar Nagar</title>
+<meta name="description" content="Gupta Bakery, Old AB Road, Dr. Ambedkar Nagar. Fresh cakes, pastries, breads, cookies and namkeen. Open daily 9am–11pm. Order on WhatsApp or call 088230 08888.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --brand:#C2263C;
+  --brand-deep:#9C1728;
+  --accent:#C2263C;
+  --accent-deep:#9C1728;
+  --accent-soft:#FBEAE7;
+  --cream:#FDF6EC;
+  --ink:#241618;
+  --muted:#7A6360;
+  --surface:#FFFCF6;
+  --bg:#FBF3E8;
+  --line:#EFE2D2;
+  --shadow:0 1px 2px rgba(80,30,25,.07), 0 8px 24px rgba(80,30,25,.06);
+  --radius:16px;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top, 0px);
+  padding-bottom:env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ink:#F6EDE6;
+    --muted:#B5A29C;
+    --surface:#231A1A;
+    --bg:#181111;
+    --line:#352626;
+    --cream:#231A1A;
+    --accent:#E2586C;
+    --accent-deep:#C2263C;
+    --accent-soft:#33201F;
+    --shadow:0 1px 2px rgba(0,0,0,.5), 0 8px 24px rgba(0,0,0,.4);
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#F6EDE6; --muted:#B5A29C; --surface:#231A1A; --bg:#181111;
+  --line:#352626; --cream:#231A1A; --accent:#E2586C; --accent-deep:#C2263C; --accent-soft:#33201F;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(86px + env(safe-area-inset-top, 0px))}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:'Plus Jakarta Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing:antialiased;line-height:1.5;
+}
+img{max-width:100%}
+a{color:inherit}
+button{font:inherit;cursor:pointer}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 18px}
+ 
+/* ---------- header ---------- */
+header{
+  position:sticky;top:env(safe-area-inset-top, 0px);z-index:60;
+  background:var(--brand);
+  box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+.topbar{display:flex;align-items:center;gap:18px;padding:12px 0}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;flex-shrink:0}
+.mark{
+  width:44px;height:44px;border-radius:13px;background:var(--cream);color:var(--brand);
+  display:grid;place-items:center;font-weight:800;font-size:19px;letter-spacing:-.5px;
+}
+.brand b{display:block;font-size:19px;font-weight:800;color:#FFF3E6;letter-spacing:-.4px;line-height:1.1}
+.brand span{display:block;font-size:11.5px;color:rgba(255,238,224,.72);font-weight:600}
+.locpill{
+  display:flex;flex-direction:column;line-height:1.25;color:#FFF3E6;
+  border-left:1px solid rgba(255,235,220,.28);padding-left:18px;min-width:0;
+}
+.locpill strong{font-size:13.5px;font-weight:800}
+.locpill small{font-size:12px;color:rgba(255,238,224,.75);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.searchbox{flex:1;position:relative;min-width:0}
+.searchbox input{
+  width:100%;border:none;border-radius:12px;padding:12px 14px 12px 40px;
+  background:#FFFCF6;color:#241618;font-size:14px;outline:2px solid transparent;
+}
+.searchbox input:focus{outline:2px solid var(--brand-deep)}
+.searchbox svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);opacity:.5}
+.callbtn{
+  display:inline-flex;align-items:center;gap:8px;background:var(--cream);color:var(--brand-deep);
+  border:none;border-radius:12px;padding:12px 16px;font-weight:700;font-size:14px;text-decoration:none;flex-shrink:0;
+}
+.callbtn:hover{background:#fff}
+nav.sub{background:var(--surface);border-bottom:1px solid var(--line)}
+nav.sub ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;overflow-x:auto;scrollbar-width:none}
+nav.sub ul::-webkit-scrollbar{display:none}
+nav.sub a{
+  display:block;padding:13px 0;font-size:13.5px;font-weight:600;color:var(--muted);
+  text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;
+}
+nav.sub a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+.status{margin-left:auto;display:flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;padding:13px 0;white-space:nowrap}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.dot.shut{background:#9A8A86;box-shadow:0 0 0 3px rgba(154,138,134,.18)}
+ 
+/* ---------- hero ---------- */
+.hero{background:linear-gradient(180deg,#F3D9CF 0%, #F9E8DB 58%, var(--bg) 100%);padding:38px 0 30px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center}
+.eta{
+  display:inline-flex;align-items:center;gap:8px;background:var(--brand);color:#FFF3E6;
+  border-radius:999px;padding:7px 14px;font-size:12.5px;font-weight:700;
+}
+.hero h1{
+  font-size:clamp(30px,5vw,50px);line-height:1.06;letter-spacing:-1.4px;
+  font-weight:800;margin:16px 0 12px;color:var(--ink);max-width:16ch;
+}
+.hero p{font-size:16px;color:#6B4C48;margin:0 0 22px;max-width:46ch}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;border:none;
+  border-radius:13px;padding:14px 22px;font-weight:700;font-size:15px;text-decoration:none;
+}
+.btn-green{background:var(--accent);color:#fff}
+.btn-green:hover{background:var(--accent-deep)}
+.btn-dark{background:var(--cream);color:var(--ink);border:1.5px solid rgba(120,60,50,.22)}
+.btn-dark:hover{border-color:var(--brand)}
+.hero-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.hcard{
+  background:var(--surface);border-radius:18px;padding:16px;box-shadow:var(--shadow);
+  display:flex;flex-direction:column;gap:6px;
+}
+.hcard b{font-size:14.5px}
+.hcard small{font-size:12.5px;color:var(--muted)}
+.hcard.tall{grid-row:span 2;justify-content:center}
+ 
+/* ---------- sections ---------- */
+section{padding:44px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:22px}
+.sec-head h2{font-size:clamp(22px,3vw,30px);letter-spacing:-.8px;font-weight:800;margin:0}
+.sec-head p{margin:6px 0 0;color:var(--muted);font-size:14.5px;max-width:60ch}
+.sec-head a{color:var(--accent);font-weight:700;font-size:14px;text-decoration:none;white-space:nowrap}
+ 
+/* categories */
+.cats{display:grid;grid-template-columns:repeat(8,1fr);gap:12px}
+.cat{
+  background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 8px;
+  text-align:center;text-decoration:none;display:block;
+}
+.cat:hover{border-color:var(--accent);background:var(--accent-soft)}
+.cat .bubble{margin-bottom:8px}
+.cat span{font-size:12.5px;font-weight:600;display:block;line-height:1.25}
+ 
+/* menu */
+.filters{display:flex;gap:9px;overflow-x:auto;padding-bottom:6px;margin-bottom:18px;scrollbar-width:none}
+.filters::-webkit-scrollbar{display:none}
+.chip{
+  background:var(--surface);border:1.5px solid var(--line);border-radius:999px;
+  padding:9px 16px;font-size:13.5px;font-weight:600;color:var(--ink);white-space:nowrap;
+}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.menu{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.item{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:12px;display:flex;flex-direction:column;
+}
+.thumb{
+  border-radius:12px;height:126px;display:grid;place-items:center;margin-bottom:11px;
+  position:relative;overflow:hidden;
+}
+.thumb svg{width:100%;height:100%;display:block}
+.bubble svg,.art svg,.gtile>svg{display:block;width:100%;height:100%}
+.bubble{height:40px}
+.hcard .art{display:block;height:46px;width:60px}
+.hcard .art.big{height:74px;width:96px}
+.gtile>svg{position:absolute;inset:0;width:100%;height:100%;padding:12%}
+.tag{
+  position:absolute;top:8px;left:8px;background:var(--brand-deep);color:#FFF3E6;font-size:10.5px;
+  font-weight:700;padding:4px 8px;border-radius:6px;letter-spacing:.2px;
+}
+.item h3{font-size:14.5px;font-weight:700;margin:0 0 3px;line-height:1.3}
+.item .desc{font-size:12.5px;color:var(--muted);margin:0 0 10px;min-height:32px}
+.item .foot{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:auto}
+.price{font-size:15px;font-weight:800}
+.price small{font-weight:600;color:var(--muted);font-size:11.5px;display:block;line-height:1.2}
+.add{
+  background:var(--accent-soft);color:var(--accent);border:1.5px solid var(--accent);
+  border-radius:9px;padding:8px 16px;font-weight:800;font-size:13px;
+}
+.add:hover{background:var(--accent);color:#fff}
+.qty{display:flex;align-items:center;background:var(--accent);border-radius:9px;overflow:hidden}
+.qty button{background:none;border:none;color:#fff;font-size:17px;padding:5px 11px;line-height:1}
+.qty span{color:#fff;font-weight:800;font-size:13.5px;min-width:18px;text-align:center}
+ 
+/* cake order */
+.order-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:start}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:var(--shadow)}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:13px;font-weight:700;margin-bottom:6px}
+.field input,.field select,.field textarea{
+  width:100%;padding:12px 13px;border:1.5px solid var(--line);border-radius:11px;
+  background:var(--bg);color:var(--ink);font:inherit;font-size:14px;
+}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--accent)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.note{font-size:12.5px;color:var(--muted);margin:10px 0 0}
+.steps{list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{
+  counter-increment:s;padding:0 0 20px 44px;position:relative;font-size:14.5px;
+  border-left:2px dashed var(--line);margin-left:15px;
+}
+.steps li:last-child{border-left-color:transparent;padding-bottom:0}
+.steps li::before{
+  content:counter(s);position:absolute;left:-16px;top:-2px;width:31px;height:31px;border-radius:50%;
+  background:var(--brand);color:#FFF3E6;font-weight:800;font-size:14px;display:grid;place-items:center;
+}
+.steps li b{display:block;margin-bottom:2px}
+.steps li span{color:var(--muted);font-size:13.5px}
+ 
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.gtile{
+  border-radius:var(--radius);aspect-ratio:1/1;display:grid;place-items:center;
+  position:relative;overflow:hidden;
+}
+.gtile span.cap{
+  position:absolute;left:0;right:0;bottom:0;padding:22px 12px 10px;font-size:12.5px;font-weight:700;color:#fff;
+  background:linear-gradient(180deg,transparent,rgba(0,0,0,.55));
+}
+.gtile.wide{grid-column:span 2;aspect-ratio:2/1}
+ 
+/* visit */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.info-row{display:flex;gap:13px;padding:14px 0;border-bottom:1px solid var(--line)}
+.info-row:last-child{border-bottom:none}
+.ico{
+  width:38px;height:38px;border-radius:11px;background:var(--accent-soft);color:var(--accent);
+  display:grid;place-items:center;flex-shrink:0;font-size:17px;
+}
+.info-row b{font-size:14px;display:block}
+.info-row p{margin:2px 0 0;font-size:13.5px;color:var(--muted)}
+.info-row a{color:var(--accent);font-weight:600;text-decoration:none}
+.maplink{
+  display:block;border-radius:var(--radius);overflow:hidden;text-decoration:none;
+  border:1px solid var(--line);background:
+    repeating-linear-gradient(45deg,rgba(194,38,60,.05) 0 14px,transparent 14px 28px),
+    linear-gradient(140deg,#F6E3DC,#FBF1E2);
+  padding:26px 22px;min-height:190px;display:flex;flex-direction:column;justify-content:flex-end;color:var(--ink);
+}
+.maplink b{font-size:17px;color:#241618;display:block;margin-bottom:4px}
+.maplink p{margin:0 0 14px;font-size:13.5px;color:#6B4C48;max-width:34ch}
+.hours-table{width:100%;border-collapse:collapse;font-size:14px}
+.hours-table td{padding:9px 0;border-bottom:1px solid var(--line)}
+.hours-table td:last-child{text-align:right;font-weight:700}
+.hours-table tr:last-child td{border-bottom:none}
+ 
+/* cart bar */
+.cartbar{
+  position:fixed;left:0;right:0;bottom:0;z-index:70;background:var(--brand);color:#FFF3E6;
+  padding:12px 18px calc(12px + env(safe-area-inset-bottom, 0px));
+  display:none;align-items:center;justify-content:space-between;gap:14px;
+}
+.cartbar.on{display:flex}
+.cartbar b{font-size:14.5px;display:block}
+.cartbar small{font-size:12px;opacity:.85}
+.cartbar a{
+  background:var(--cream);color:var(--brand-deep);border-radius:11px;padding:11px 18px;
+  font-weight:800;font-size:14px;text-decoration:none;white-space:nowrap;
+}
+ 
+footer{background:#2C1518;color:#F0E2D8;padding:44px 0 34px;margin-top:10px}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:28px}
+footer h4{font-size:13.5px;margin:0 0 12px;font-weight:800;color:#fff}
+footer p,footer li{font-size:13.5px;color:#C3ABA4;margin:0 0 8px;line-height:1.6}
+footer ul{list-style:none;padding:0;margin:0}
+footer a{color:#C3ABA4;text-decoration:none}
+footer a:hover{color:#F2B9AE}
+.fbar{border-top:1px solid #45262A;margin-top:28px;padding-top:18px;font-size:12.5px;color:#9B817A;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
+ 
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:6px}
+@media (prefers-reduced-motion:no-preference){
+  .add,.btn,.cat,.chip{transition:background .15s ease,color .15s ease,border-color .15s ease}
+}
+@media (max-width:1000px){
+  .cats{grid-template-columns:repeat(4,1fr)}
+  .menu{grid-template-columns:repeat(3,1fr)}
+  .hero-grid,.order-grid,.visit,.fgrid{grid-template-columns:1fr}
+  .gallery{grid-template-columns:repeat(2,1fr)}
+  .locpill{display:none}
+}
+@media (max-width:720px){
+  .searchbox{order:3;flex-basis:100%}
+  .topbar{flex-wrap:wrap;gap:12px}
+  .menu{grid-template-columns:repeat(2,1fr)}
+  .callbtn span{display:none}
+  .hero{padding:26px 0 24px}
+  section{padding:34px 0}
+  body{padding-bottom:78px}
+}
+</style>
+</head>
+<body>
+ 
+<header>
+  <div class="wrap topbar">
+    <a class="brand" href="#top">
+      <span class="mark">GB</span>
+      <span><b>Gupta Bakery</b><span>Since the morning batch, daily</span></span>
+    </a>
+    <div class="locpill">
+      <strong>Dr. Ambedkar Nagar</strong>
+      <small>Old AB Road, opp. High School · 453441</small>
+    </div>
+    <div class="searchbox">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+      <input id="search" type="search" placeholder="Search cakes, bread, patties…" aria-label="Search the menu">
+    </div>
+    <a class="callbtn" href="tel:+918823008888"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 2.2Z"/></svg><span>088230 08888</span></a>
+  </div>
+  <nav class="sub">
+    <div class="wrap" style="display:flex;align-items:center;gap:26px">
+      <ul>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#cakes">Order a cake</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#visit">Visit us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="status"><span class="dot" id="dot"></span><span id="statusText">Open now · till 11:00 pm</span></div>
+    </div>
+  </nav>
+</header>
+ 
+<main id="top">
+ 
+<div class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eta">🕘 Counter open 9:00 am – 11:00 pm, every day</span>
+      <h1>Fresh from the oven, all day long.</h1>
+      <p>Cakes for the evening, bread for the morning, and hot patties whenever you walk in. Order on WhatsApp and pick up from Old AB Road, opposite High School.</p>
+      <div class="cta-row">
+        <a class="btn btn-green" href="https://wa.me/918823008888?text=Hi%20Gupta%20Bakery%2C%20I%27d%20like%20to%20place%20an%20order." target="_blank" rel="noopener">Order on WhatsApp</a>
+        <a class="btn btn-dark" href="#cakes">Book a cake</a>
+      </div>
+    </div>
+    <div class="hero-cards">
+      <div class="hcard tall">
+        <span class="art big" data-art="cake" data-pal="choco"></span>
+        <b>Cakes baked to order</b>
+        <small>Chocolate truffle, pineapple, black forest, red velvet. Eggless on request. Ready in 4 hours.</small>
+      </div>
+      <div class="hcard">
+        <span class="art" data-art="loaf" data-pal="milk"></span>
+        <b>Morning bread</b>
+        <small>Out of the oven by 9 am</small>
+      </div>
+      <div class="hcard">
+        <span class="art" data-art="pin" data-pal="forest"></span>
+        <b>Badwani Banglow</b>
+        <small>Opposite High School</small>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+<section id="categories" style="padding-top:8px">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>What are you picking up today?</h2>
+        <p>Everything on the counter, sorted the way you'd ask for it.</p>
+      </div>
+    </div>
+    <div class="cats">
+      <a class="cat" href="#menu" data-cat="Cakes"><div class="bubble" data-art="cake" data-pal="choco"></div><span>Cakes</span></a>
+      <a class="cat" href="#menu" data-cat="Pastries"><div class="bubble" data-art="slice" data-pal="pine"></div><span>Pastries</span></a>
+      <a class="cat" href="#menu" data-cat="Breads"><div class="bubble" data-art="loaf" data-pal="milk"></div><span>Breads</span></a>
+      <a class="cat" href="#menu" data-cat="Cookies"><div class="bubble" data-art="cookies" data-pal="butter"></div><span>Cookies</span></a>
+      <a class="cat" href="#menu" data-cat="Rusk"><div class="bubble" data-art="rusk" data-pal="rusk"></div><span>Rusk &amp; toast</span></a>
+      <a class="cat" href="#menu" data-cat="Savoury"><div class="bubble" data-art="puff" data-pal="puff"></div><span>Patties</span></a>
+      <a class="cat" href="#menu" data-cat="Namkeen"><div class="bubble" data-art="bowl" data-pal="spice"></div><span>Namkeen</span></a>
+      <a class="cat" href="#menu" data-cat="Gifting"><div class="bubble" data-art="gift" data-pal="gift"></div><span>Hampers</span></a>
+    </div>
+  </div>
+</section>
+ 
+<section id="menu" style="padding-top:10px">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>Today's menu</h2>
+        <p>Tap add, then send the list straight to our WhatsApp. We'll confirm the total and keep it packed for you.</p>
+      </div>
+      <a href="https://wa.me/918823008888" target="_blank" rel="noopener">Ask for something else</a>
+    </div>
+    <div class="filters" id="filters" role="group" aria-label="Filter menu by category"></div>
+    <div class="menu" id="grid"></div>
+    <p class="note" id="empty" hidden>Nothing matches that. Try "cake", "bread" or call us on 088230 08888 — if we can bake it, we will.</p>
+  </div>
+</section>
+ 
+<section id="cakes" style="background:var(--surface);border-block:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>Order a cake</h2>
+        <p>Birthday, anniversary, or a Tuesday that needs improving. Fill this in and it opens a ready-made WhatsApp message — nothing is sent until you press send.</p>
+      </div>
+    </div>
+    <div class="order-grid">
+      <div class="panel">
+        <div class="two">
+          <div class="field"><label for="ck-name">Your name</label><input id="ck-name" type="text" placeholder="e.g. Rohit Sharma"></div>
+          <div class="field"><label for="ck-phone">Your phone</label><input id="ck-phone" type="tel" inputmode="numeric" placeholder="10-digit number"></div>
+        </div>
+        <div class="two">
+          <div class="field">
+            <label for="ck-flavour">Flavour</label>
+            <select id="ck-flavour">
+              <option>Chocolate truffle</option><option>Pineapple</option><option>Black forest</option>
+              <option>Butterscotch</option><option>Red velvet</option><option>Vanilla</option><option>Mixed fruit</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="ck-weight">Weight</label>
+            <select id="ck-weight"><option>500 g</option><option>1 kg</option><option>1.5 kg</option><option>2 kg</option><option>3 kg</option></select>
+          </div>
+        </div>
+        <div class="two">
+          <div class="field">
+            <label for="ck-egg">Egg or eggless</label>
+            <select id="ck-egg"><option>Eggless</option><option>With egg</option></select>
+          </div>
+          <div class="field"><label for="ck-date">Pick-up date &amp; time</label><input id="ck-date" type="datetime-local"></div>
+        </div>
+        <div class="field"><label for="ck-msg">Message on the cake</label><input id="ck-msg" type="text" placeholder="Happy Birthday Aarav"></div>
+        <div class="field"><label for="ck-notes">Anything else</label><textarea id="ck-notes" rows="2" placeholder="Photo print, sugar-free, specific design…"></textarea></div>
+        <a class="btn btn-green" id="ck-send" href="#" style="width:100%">Open WhatsApp with these details</a>
+        <p class="note">Prefer to talk it through? Call <a href="tel:+918823008888" style="color:var(--accent);font-weight:700">088230 08888</a> or <a href="tel:+919617545543" style="color:var(--accent);font-weight:700">096175 45543</a>.</p>
+      </div>
+      <div>
+        <h3 style="font-size:16px;margin:4px 0 18px">How a cake order works</h3>
+        <ol class="steps">
+          <li><b>Send the details</b><span>Flavour, weight, pick-up time and the message you want piped on top.</span></li>
+          <li><b>We confirm the price</b><span>You'll get the total and a token amount to book the slot on busy dates.</span></li>
+          <li><b>We bake it fresh</b><span>Standard cakes need about 4 hours. Photo prints and custom designs, a day ahead.</span></li>
+          <li><b>Pick it up</b><span>Collect from the counter on Old AB Road, packed with candles and a knife.</span></li>
+        </ol>
+        <div style="background:var(--accent-soft);border-radius:14px;padding:16px;margin-top:20px;font-size:13.5px">
+          <b>Festival and wedding orders</b><br>
+          <span style="color:var(--muted)">For 5 kg and above, or bulk sweet boxes, give us two days' notice so we can plan the oven.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<section id="gallery">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>From the counter</h2>
+        <p>A look at what usually sits in the display case.</p>
+      </div>
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener">See more on Instagram</a>
+    </div>
+    <div class="gallery">
+      <div class="gtile wide" data-art="cake" data-pal="choco" style="background:linear-gradient(135deg,#F7DCCF,#DE8878)"><span class="cap">Two-tier chocolate truffle, booked a day ahead</span></div>
+      <div class="gtile" data-art="rusk" data-pal="rusk" style="background:linear-gradient(135deg,#FBEEDF,#E6C6A6)"><span class="cap">Butter rusk, baked twice</span></div>
+      <div class="gtile" data-art="cupcake" data-pal="violet" style="background:linear-gradient(135deg,#FAE7E4,#E2A8A6)"><span class="cap">Cupcake trays for school parties</span></div>
+      <div class="gtile" data-art="loaf" data-pal="milk" style="background:linear-gradient(135deg,#FBF1E2,#DFC3A2)"><span class="cap">Morning loaves, out by nine</span></div>
+      <div class="gtile wide" data-art="slice" data-pal="red" style="background:linear-gradient(135deg,#F6DAD3,#D2707A)"><span class="cap">Pastry counter, restocked through the evening</span></div>
+      <div class="gtile" data-art="cookies" data-pal="butter" style="background:linear-gradient(135deg,#FAEAE0,#E0B9A4)"><span class="cap">Jar cookies by weight</span></div>
+    </div>
+  </div>
+</section>
+ 
+<section id="visit" style="background:var(--surface);border-block:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>Visit the shop</h2>
+        <p>We're on Old AB Road at Badwani Banglow, directly opposite the High School.</p>
+      </div>
+    </div>
+    <div class="visit">
+      <div class="panel" style="padding:8px 22px">
+        <div class="info-row">
+          <span class="ico">📍</span>
+          <div><b>Address</b><p>Badwani Banglow, Old AB Road, opposite High School,<br>Dr. Ambedkar Nagar, Madhya Pradesh 453441</p></div>
+        </div>
+        <div class="info-row">
+          <span class="ico">📞</span>
+          <div><b>Phone</b><p><a href="tel:+918823008888">088230 08888</a> · <a href="tel:+919617545543">096175 45543</a></p></div>
+        </div>
+        <div class="info-row">
+          <span class="ico">💬</span>
+          <div><b>WhatsApp orders</b><p><a href="https://wa.me/918823008888" target="_blank" rel="noopener">Message 088230 08888</a> — send your list, we'll pack it.</p></div>
+        </div>
+        <div class="info-row">
+          <span class="ico">🕘</span>
+          <div style="width:100%">
+            <b>Opening hours</b>
+            <table class="hours-table" style="margin-top:8px">
+              <tr><td>Monday – Friday</td><td>9:00 am – 11:00 pm</td></tr>
+              <tr><td>Saturday</td><td>9:00 am – 11:00 pm</td></tr>
+              <tr><td>Sunday</td><td>9:00 am – 11:00 pm</td></tr>
+              <tr><td>Festivals</td><td>Open, extended hours</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div>
+        <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Gupta+Bakery+Old+AB+Road+Dr+Ambedkar+Nagar+Madhya+Pradesh+453441" target="_blank" rel="noopener">
+          <b>Old AB Road, opposite High School</b>
+          <p>Landmark: the High School gate. We're the yellow counter on the roadside at Badwani Banglow.</p>
+          <span class="btn btn-green" style="align-self:flex-start">Get directions</span>
+        </a>
+        <div class="panel" style="margin-top:18px" id="contact">
+          <h3 style="margin:0 0 4px;font-size:17px">Send us a message</h3>
+          <p class="note" style="margin:0 0 16px">Questions, bulk enquiries or feedback. This opens WhatsApp with your message filled in.</p>
+          <div class="two">
+            <div class="field"><label for="c-name">Name</label><input id="c-name" type="text" placeholder="Your name"></div>
+            <div class="field"><label for="c-phone">Phone</label><input id="c-phone" type="tel" inputmode="numeric" placeholder="10-digit number"></div>
+          </div>
+          <div class="field"><label for="c-msg">Message</label><textarea id="c-msg" rows="3" placeholder="I need 40 pastry boxes for an office event on Friday…"></textarea></div>
+          <a class="btn btn-green" id="c-send" href="#" style="width:100%">Send on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+</main>
+ 
+<footer>
+  <div class="wrap fgrid">
+    <div>
+      <a class="brand" href="#top" style="margin-bottom:12px">
+        <span class="mark">GB</span>
+        <span><b style="color:#fff">Gupta Bakery</b><span style="color:#C3ABA4">Dr. Ambedkar Nagar</span></span>
+      </a>
+      <p>Cakes, bread, pastries, cookies and namkeen, baked fresh on Old AB Road and sold over the counter from nine in the morning till eleven at night.</p>
+    </div>
+    <div>
+      <h4>Quick links</h4>
+      <ul>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#cakes">Order a cake</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#visit">Hours &amp; address</a></li>
+        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Reach us</h4>
+      <ul>
+        <li><a href="tel:+918823008888">088230 08888</a></li>
+        <li><a href="tel:+919617545543">096175 45543</a></li>
+        <li><a href="https://wa.me/918823008888" target="_blank" rel="noopener">WhatsApp orders</a></li>
+        <li>Badwani Banglow, Old AB Road,<br>opposite High School, 453441</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap fbar">
+    <span>© <span id="yr"></span> Gupta Bakery, Dr. Ambedkar Nagar, Madhya Pradesh</span>
+    <span>Open daily · 9:00 am – 11:00 pm</span>
+  </div>
+</footer>
+ 
+<div class="cartbar" id="cartbar">
+  <div><b id="cart-count">0 items</b><small id="cart-total">₹0 · pay at the counter</small></div>
+  <a id="cart-send" href="#" target="_blank" rel="noopener">Send order on WhatsApp</a>
+</div>
+ 
+<script>
+const PHONE = "918823008888";
+ 
+/* ---- illustrations: every product drawn as vector art ---- */
+const PAL = {
+  choco:{a:"#6B4226",b:"#42230F",c:"#A9743F",d:"#FFF1DC"},
+  pine:{a:"#F6DFA2",b:"#E9BE4F",c:"#FFF7E2",d:"#F2A02C"},
+  forest:{a:"#4A2C1C",b:"#2E1A0F",c:"#FFF6EC",d:"#C22B3E"},
+  red:{a:"#AE3040",b:"#8A1F2E",c:"#FFF4EC",d:"#E7C9A9"},
+  sky:{a:"#D9E3F0",b:"#9FB4CE",c:"#FFFFFF",d:"#6E88A8"},
+  cream:{a:"#F2DEC0",b:"#D8AF77",c:"#FFF9EE",d:"#B57B3C"},
+  violet:{a:"#D8C4E8",b:"#A98BC6",c:"#F7F0FC",d:"#7A5A9E"},
+  jam:{a:"#F0D6B4",b:"#D2A566",c:"#FFF3E0",d:"#C0453F"},
+  milk:{a:"#EEC98F",b:"#CF9A4E",c:"#FBEDD6",d:"#8E5D25"},
+  wheat:{a:"#C08B50",b:"#95662F",c:"#EAD6B5",d:"#6A441B"},
+  pav:{a:"#EBC188",b:"#CB9448",c:"#FAEBD2",d:"#8A5A22"},
+  sesame:{a:"#E7BE83",b:"#C89249",c:"#FFF6E6",d:"#7E5320"},
+  butter:{a:"#EED8AC",b:"#D3B173",c:"#FBF1DC",d:"#9C7530"},
+  pista:{a:"#DED9AA",b:"#B9BB6C",c:"#F4F2DA",d:"#6F7E33"},
+  coco:{a:"#F1E6D2",b:"#D4BD98",c:"#FFFAF0",d:"#A98A56"},
+  rusk:{a:"#E4BE85",b:"#C99A54",c:"#FAEDD8",d:"#8C5E26"},
+  toast:{a:"#EFD5A2",b:"#D2AE68",c:"#FCF2DC",d:"#94682A"},
+  puff:{a:"#EBC383",b:"#C6924A",c:"#FBEDD3",d:"#8A5C21"},
+  paneer:{a:"#F2D69C",b:"#CFA255",c:"#FDF3DA",d:"#96692A"},
+  cheese:{a:"#F0DCAE",b:"#D9B565",c:"#FFF3CF",d:"#C8892C"},
+  spice:{a:"#DD9840",b:"#B06A1F",c:"#F7DCA9",d:"#7E4712"},
+  nut:{a:"#D9A365",b:"#AC7736",c:"#F3DEBE",d:"#7B4E18"},
+  gift:{a:"#E9B44C",b:"#C58A22",c:"#FFF0CC",d:"#A33A3A"}
+};
+ 
+const SH = '<ellipse cx="100" cy="129" rx="55" ry="7" fill="rgba(0,0,0,.13)"/>';
+const S = i => '<svg viewBox="0 0 200 150" preserveAspectRatio="xMidYMid meet" aria-hidden="true">' + i + '</svg>';
+ 
+const DRAW = {
+  cake: p => SH +
+    '<path d="M54 72 h92 v46 a8 8 0 0 1-8 8 H62 a8 8 0 0 1-8-8 Z" fill="' + p.a + '"/>' +
+    '<rect x="54" y="96" width="92" height="8" fill="' + p.c + '" opacity=".5"/>' +
+    '<g fill="' + p.b + '"><rect x="54" y="68" width="92" height="20"/><circle cx="62" cy="88" r="8"/><circle cx="82" cy="88" r="8"/><circle cx="102" cy="88" r="8"/><circle cx="122" cy="88" r="8"/><circle cx="141" cy="88" r="8"/></g>' +
+    '<ellipse cx="100" cy="68" rx="46" ry="12" fill="' + p.c + '"/>' +
+    '<g fill="' + p.b + '"><circle cx="70" cy="64" r="5"/><circle cx="85" cy="60" r="5"/><circle cx="100" cy="59" r="5"/><circle cx="115" cy="60" r="5"/><circle cx="130" cy="64" r="5"/></g>' +
+    '<circle cx="100" cy="48" r="6.5" fill="' + p.d + '"/>' +
+    '<path d="M100 43 q5-8 11-8" fill="none" stroke="#5C7C3A" stroke-width="2.5" stroke-linecap="round"/>',
+ 
+  slice: p => SH +
+    '<path d="M60 120 V84 L100 60 L140 84 V120 Z" fill="' + p.a + '"/>' +
+    '<rect x="60" y="98" width="80" height="9" fill="' + p.c + '"/>' +
+    '<rect x="60" y="112" width="80" height="6" fill="' + p.c + '" opacity=".75"/>' +
+    '<path d="M100 60 L140 84 H60 Z" fill="' + p.b + '"/>' +
+    '<circle cx="100" cy="74" r="6" fill="' + p.d + '"/>',
+ 
+  photocake: p => SH +
+    '<path d="M54 78 h92 v40 a8 8 0 0 1-8 8 H62 a8 8 0 0 1-8-8 Z" fill="' + p.a + '"/>' +
+    '<ellipse cx="100" cy="78" rx="46" ry="12" fill="' + p.c + '"/>' +
+    '<rect x="68" y="40" width="64" height="44" rx="4" fill="#fff" stroke="' + p.b + '" stroke-width="3"/>' +
+    '<path d="M72 78 l16-18 12 12 10-10 18 16 Z" fill="' + p.d + '"/>' +
+    '<circle cx="86" cy="54" r="5" fill="' + p.b + '"/>',
+ 
+  cupcake: p => SH +
+    '<path d="M68 86 h64 l-7 38 a6 6 0 0 1-6 5 H81 a6 6 0 0 1-6-5 Z" fill="' + p.b + '"/>' +
+    '<g fill="#fff" opacity=".3"><rect x="82" y="88" width="5" height="40"/><rect x="98" y="88" width="5" height="40"/><rect x="114" y="88" width="5" height="40"/></g>' +
+    '<g fill="' + p.a + '"><ellipse cx="100" cy="86" rx="35" ry="12"/><ellipse cx="85" cy="74" rx="19" ry="13"/><ellipse cx="115" cy="74" rx="19" ry="13"/><ellipse cx="100" cy="62" rx="17" ry="13"/></g>' +
+    '<circle cx="100" cy="47" r="6.5" fill="' + p.d + '"/>',
+ 
+  roll: p => SH +
+    '<path d="M104 68 h30 a24 24 0 0 1 0 50 h-30 Z" fill="' + p.b + '"/>' +
+    '<circle cx="86" cy="93" r="30" fill="' + p.a + '"/>' +
+    '<path d="M86 69 a24 24 0 1 1-17 41" fill="none" stroke="' + p.c + '" stroke-width="7"/>' +
+    '<path d="M86 81 a12 12 0 1 1-8 21" fill="none" stroke="' + p.d + '" stroke-width="5"/>',
+ 
+  loaf: p => SH +
+    '<path d="M46 118 V92 a44 30 0 0 1 88 0 v26 a6 6 0 0 1-6 6 H52 a6 6 0 0 1-6-6 Z" fill="' + p.a + '"/>' +
+    '<path d="M46 94 a44 30 0 0 1 88 0 Z" fill="' + p.b + '"/>' +
+    '<g stroke="' + p.d + '" stroke-width="2.5" opacity=".5"><path d="M64 118 V96"/><path d="M90 118 V94"/><path d="M116 118 V96"/></g>' +
+    '<path d="M136 122 V86 a13 13 0 0 1 26 0 v36 Z" fill="' + p.c + '"/>' +
+    '<path d="M136 90 a13 13 0 0 1 26 0" fill="none" stroke="' + p.b + '" stroke-width="4"/>',
+ 
+  bun: p => SH +
+    '<ellipse cx="72" cy="102" rx="31" ry="25" fill="' + p.b + '"/>' +
+    '<ellipse cx="126" cy="102" rx="31" ry="25" fill="' + p.a + '"/>' +
+    '<ellipse cx="126" cy="94" rx="26" ry="17" fill="' + p.c + '" opacity=".45"/>' +
+    '<g fill="' + p.d + '" opacity=".75"><ellipse cx="116" cy="88" rx="3" ry="2"/><ellipse cx="130" cy="86" rx="3" ry="2"/><ellipse cx="124" cy="96" rx="3" ry="2"/><ellipse cx="138" cy="94" rx="3" ry="2"/><ellipse cx="66" cy="92" rx="3" ry="2"/><ellipse cx="80" cy="96" rx="3" ry="2"/></g>',
+ 
+  cookies: p => SH +
+    '<g fill="' + p.a + '" stroke="' + p.b + '" stroke-width="2"><ellipse cx="86" cy="116" rx="34" ry="10"/><ellipse cx="86" cy="103" rx="34" ry="10"/><ellipse cx="86" cy="90" rx="34" ry="10"/></g>' +
+    '<circle cx="140" cy="96" r="26" fill="' + p.a + '" stroke="' + p.b + '" stroke-width="2"/>' +
+    '<g fill="' + p.d + '"><circle cx="133" cy="88" r="3.5"/><circle cx="148" cy="93" r="3.5"/><circle cx="137" cy="104" r="3.5"/><circle cx="150" cy="107" r="3"/><circle cx="78" cy="86" r="3"/><circle cx="95" cy="90" r="3"/></g>',
+ 
+  rusk: p => SH +
+    '<g transform="rotate(-9 76 92)"><rect x="60" y="58" width="28" height="66" rx="7" fill="' + p.a + '"/><rect x="60" y="58" width="28" height="9" rx="4" fill="' + p.b + '"/></g>' +
+    '<rect x="88" y="52" width="28" height="72" rx="7" fill="' + p.c + '"/>' +
+    '<rect x="88" y="52" width="28" height="10" rx="4" fill="' + p.b + '"/>' +
+    '<g transform="rotate(9 126 92)"><rect x="112" y="58" width="28" height="66" rx="7" fill="' + p.a + '"/><rect x="112" y="58" width="28" height="9" rx="4" fill="' + p.b + '"/></g>' +
+    '<g fill="' + p.d + '" opacity=".4"><circle cx="97" cy="76" r="2.5"/><circle cx="107" cy="90" r="2.5"/><circle cx="99" cy="104" r="2.5"/></g>',
+ 
+  puff: p => SH +
+    '<path d="M54 118 L100 52 L146 118 Z" fill="' + p.a + '"/>' +
+    '<g stroke="' + p.b + '" stroke-width="3.5" stroke-linecap="round" fill="none"><path d="M70 104 h60"/><path d="M79 90 h42"/><path d="M88 76 h24"/></g>' +
+    '<ellipse cx="100" cy="118" rx="47" ry="8" fill="' + p.b + '"/>' +
+    '<circle cx="100" cy="56" r="4" fill="' + p.d + '"/>',
+ 
+  toast: p => SH +
+    '<path d="M50 120 V88 a17 15 0 0 1 34 0 v32 Z" fill="' + p.a + '"/>' +
+    '<path d="M86 120 V84 a17 15 0 0 1 34 0 v36 Z" fill="' + p.a + '"/>' +
+    '<path d="M122 120 V88 a17 15 0 0 1 34 0 v32 Z" fill="' + p.a + '"/>' +
+    '<g fill="' + p.c + '"><path d="M52 96 q16-12 30 0 q-14 9-30 0Z"/><path d="M88 92 q16-12 30 0 q-14 9-30 0Z"/><path d="M124 96 q16-12 30 0 q-14 9-30 0Z"/></g>' +
+    '<g fill="' + p.d + '" opacity=".8"><circle cx="66" cy="94" r="2.5"/><circle cx="103" cy="90" r="2.5"/><circle cx="139" cy="94" r="2.5"/></g>',
+ 
+  bowl: p => SH +
+    '<path d="M56 92 q44-36 88 0 Z" fill="' + p.a + '"/>' +
+    '<g fill="' + p.d + '"><circle cx="78" cy="82" r="4"/><circle cx="96" cy="74" r="4"/><circle cx="114" cy="78" r="4"/><circle cx="130" cy="86" r="4"/><circle cx="66" cy="89" r="3.5"/><circle cx="105" cy="87" r="3.5"/></g>' +
+    '<path d="M50 92 h100 a50 32 0 0 1-100 0 Z" fill="' + p.b + '"/>' +
+    '<path d="M50 92 h100 v6 H50 Z" fill="' + p.c + '" opacity=".5"/>',
+ 
+  gift: p => SH +
+    '<rect x="56" y="78" width="88" height="46" rx="6" fill="' + p.a + '"/>' +
+    '<rect x="50" y="64" width="100" height="18" rx="5" fill="' + p.b + '"/>' +
+    '<rect x="92" y="64" width="16" height="60" fill="' + p.d + '"/>' +
+    '<path d="M100 66 c-18-16-36-2-16 6 M100 66 c18-16 36-2 16 6" fill="none" stroke="' + p.d + '" stroke-width="6" stroke-linecap="round"/>' +
+    '<circle cx="100" cy="66" r="7" fill="' + p.c + '"/>',
+ 
+  pin: p => '<path d="M100 36 a34 34 0 0 1 34 34 c0 26-34 56-34 56 S66 96 66 70 a34 34 0 0 1 34-34 Z" fill="' + p.a + '"/><circle cx="100" cy="70" r="14" fill="#fff"/>'
+};
+ 
+const art = (kind, pal) => S(DRAW[kind](PAL[pal] || PAL.cream));
+ 
+const ITEMS = [
+  {n:"Chocolate truffle cake", c:"Cakes", d:"Dark chocolate sponge, ganache finish", p:450, u:"per 500 g", k:"cake", pal:"choco", bg:"linear-gradient(135deg,#F7EADC,#E0C3A2)", tag:"Bestseller"},
+  {n:"Pineapple cake", c:"Cakes", d:"Light sponge, fresh cream, pineapple", p:400, u:"per 500 g", k:"cake", pal:"pine", bg:"linear-gradient(135deg,#FFF6DC,#F6E3A8)"},
+  {n:"Black forest cake", c:"Cakes", d:"Cherries, cream and chocolate shavings", p:430, u:"per 500 g", k:"cake", pal:"forest", bg:"linear-gradient(135deg,#FBEAEA,#E7BDBD)"},
+  {n:"Red velvet cake", c:"Cakes", d:"Cream cheese frosting, eggless option", p:520, u:"per 500 g", k:"slice", pal:"red", bg:"linear-gradient(135deg,#FCE8E8,#EAB9B9)"},
+  {n:"Photo print cake", c:"Cakes", d:"Edible print, order a day ahead", p:650, u:"per 1 kg", k:"photocake", pal:"sky", bg:"linear-gradient(135deg,#EFF4FA,#C8D7E8)", tag:"Pre-order"},
+  {n:"Chocolate pastry", c:"Pastries", d:"Single slice, from the display case", p:40, u:"per piece", k:"slice", pal:"choco", bg:"linear-gradient(135deg,#F6EADD,#DCC0A4)"},
+  {n:"Pineapple pastry", c:"Pastries", d:"Cream and fruit, chilled", p:35, u:"per piece", k:"slice", pal:"pine", bg:"linear-gradient(135deg,#FFF8E0,#F3E1AA)"},
+  {n:"Vanilla cupcake", c:"Pastries", d:"Buttercream swirl, box of 6 available", p:30, u:"per piece", k:"cupcake", pal:"violet", bg:"linear-gradient(135deg,#F7F1FB,#DCCCEB)"},
+  {n:"Swiss roll", c:"Pastries", d:"Jam filled, cut fresh", p:25, u:"per piece", k:"roll", pal:"jam", bg:"linear-gradient(135deg,#FBEEDD,#E6C7A0)"},
+  {n:"Milk bread", c:"Breads", d:"Soft loaf, baked every morning", p:45, u:"400 g loaf", k:"loaf", pal:"milk", bg:"linear-gradient(135deg,#FBF1E2,#E8D0AE)", tag:"Daily"},
+  {n:"Brown bread", c:"Breads", d:"Whole wheat, less sweet", p:55, u:"400 g loaf", k:"loaf", pal:"wheat", bg:"linear-gradient(135deg,#F4E9D8,#DCC09B)"},
+  {n:"Pav (8 pcs)", c:"Breads", d:"For bhaji, vada or misal", p:35, u:"pack of 8", k:"bun", pal:"pav", bg:"linear-gradient(135deg,#FBEFDD,#E7CCA5)"},
+  {n:"Burger buns", c:"Breads", d:"Sesame topped, pack of 4", p:40, u:"pack of 4", k:"bun", pal:"sesame", bg:"linear-gradient(135deg,#FAECD7,#E4C79D)"},
+  {n:"Jeera butter cookies", c:"Cookies", d:"Salty-sweet, sold by weight", p:220, u:"per kg", k:"cookies", pal:"butter", bg:"linear-gradient(135deg,#FAF0DC,#E5D1A8)"},
+  {n:"Kaju pista cookies", c:"Cookies", d:"Loaded with cashew and pistachio", p:380, u:"per kg", k:"cookies", pal:"pista", bg:"linear-gradient(135deg,#F6F5E4,#D9DBB4)"},
+  {n:"Coconut cookies", c:"Cookies", d:"Crunchy, tea-time regular", p:240, u:"per kg", k:"cookies", pal:"coco", bg:"linear-gradient(135deg,#FBF6EC,#E3D6BF)"},
+  {n:"Butter rusk", c:"Rusk", d:"Twice baked, keeps for weeks", p:160, u:"per kg", k:"rusk", pal:"rusk", bg:"linear-gradient(135deg,#FAEDD9,#E6C99E)", tag:"Tea-time"},
+  {n:"Elaichi toast", c:"Rusk", d:"Cardamom scented, dunk-friendly", p:180, u:"per kg", k:"rusk", pal:"toast", bg:"linear-gradient(135deg,#FCF3DE,#EAD7A8)"},
+  {n:"Veg patties", c:"Savoury", d:"Flaky puff, spiced potato filling", p:25, u:"per piece", k:"puff", pal:"puff", bg:"linear-gradient(135deg,#FAEEDA,#E6CBA0)", tag:"Hot"},
+  {n:"Paneer puff", c:"Savoury", d:"Masala paneer, served warm", p:35, u:"per piece", k:"puff", pal:"paneer", bg:"linear-gradient(135deg,#FDF3DF,#EBD5A6)"},
+  {n:"Cheese garlic bread", c:"Savoury", d:"Baked to order, 10 minutes", p:90, u:"per plate", k:"toast", pal:"cheese", bg:"linear-gradient(135deg,#FBF2DA,#E8D49C)"},
+  {n:"Masala mixture", c:"Namkeen", d:"House mix, medium spicy", p:280, u:"per kg", k:"bowl", pal:"spice", bg:"linear-gradient(135deg,#FAEBD2,#E7C393)"},
+  {n:"Salted peanuts", c:"Namkeen", d:"Roasted daily", p:220, u:"per kg", k:"bowl", pal:"nut", bg:"linear-gradient(135deg,#F7EBDA,#E0C49B)"},
+  {n:"Festival gift box", c:"Gifting", d:"Cookies, rusk and dry cake, boxed", p:550, u:"per box", k:"gift", pal:"gift", bg:"linear-gradient(135deg,#FDF0CE,#F0D28A)", tag:"Gifting"},
+];
+ 
+const CATS = ["All","Cakes","Pastries","Breads","Cookies","Rusk","Savoury","Namkeen","Gifting"];
+const LABEL = {All:"Everything", Rusk:"Rusk & toast", Savoury:"Patties & savoury"};
+const cart = {};
+let active = "All", query = "";
+ 
+const grid = document.getElementById("grid");
+const filters = document.getElementById("filters");
+const empty = document.getElementById("empty");
+ 
+CATS.forEach(c => {
+  const b = document.createElement("button");
+  b.className = "chip"; b.textContent = LABEL[c] || c;
+  b.setAttribute("aria-pressed", c === "All");
+  b.onclick = () => { active = c; query = ""; document.getElementById("search").value = ""; paint(); };
+  b.dataset.cat = c;
+  filters.appendChild(b);
+});
+ 
+function paint(){
+  [...filters.children].forEach(b => b.setAttribute("aria-pressed", b.dataset.cat === active));
+  const q = query.trim().toLowerCase();
+  const list = ITEMS.filter(i =>
+    (active === "All" || i.c === active) &&
+    (!q || (i.n + " " + i.d + " " + i.c).toLowerCase().includes(q))
+  );
+  grid.innerHTML = "";
+  empty.hidden = list.length > 0;
+  list.forEach(i => {
+    const el = document.createElement("article");
+    el.className = "item";
+    const qty = cart[i.n]?.q || 0;
+    el.innerHTML =
+      '<div class="thumb" style="background:' + i.bg + '">' + (i.tag ? '<span class="tag">' + i.tag + '</span>' : '') + art(i.k, i.pal) + '</div>' +
+      '<h3>' + i.n + '</h3>' +
+      '<p class="desc">' + i.d + '</p>' +
+      '<div class="foot"><span class="price">₹' + i.p + '<small>' + i.u + '</small></span></div>';
+    const foot = el.querySelector(".foot");
+    foot.appendChild(control(i, qty));
+    grid.appendChild(el);
+  });
+}
+ 
+function control(i, qty){
+  if(!qty){
+    const b = document.createElement("button");
+    b.className = "add"; b.textContent = "ADD";
+    b.setAttribute("aria-label", "Add " + i.n + " to your order");
+    b.onclick = () => { change(i, 1); };
+    return b;
+  }
+  const box = document.createElement("div");
+  box.className = "qty";
+  const minus = document.createElement("button"); minus.textContent = "−";
+  minus.setAttribute("aria-label", "Remove one " + i.n); minus.onclick = () => change(i, -1);
+  const num = document.createElement("span"); num.textContent = qty;
+  const plus = document.createElement("button"); plus.textContent = "+";
+  plus.setAttribute("aria-label", "Add one more " + i.n); plus.onclick = () => change(i, 1);
+  box.append(minus, num, plus);
+  return box;
+}
+ 
+function change(i, d){
+  const c = cart[i.n] || { q:0, p:i.p, u:i.u };
+  c.q += d;
+  if(c.q <= 0) delete cart[i.n]; else cart[i.n] = c;
+  paint(); updateCart();
+}
+ 
+function updateCart(){
+  const keys = Object.keys(cart);
+  const bar = document.getElementById("cartbar");
+  bar.classList.toggle("on", keys.length > 0);
+  const count = keys.reduce((s,k) => s + cart[k].q, 0);
+  const total = keys.reduce((s,k) => s + cart[k].q * cart[k].p, 0);
+  document.getElementById("cart-count").textContent = count + (count === 1 ? " item" : " items");
+  document.getElementById("cart-total").textContent = "About ₹" + total + " · pay at the counter";
+  const lines = keys.map(k => "• " + k + " × " + cart[k].q + " (" + cart[k].u + ")").join("\n");
+  const msg = "Hi Gupta Bakery, I'd like to order:\n" + lines + "\n\nApprox total: ₹" + total + "\nWhen can I pick this up?";
+  document.getElementById("cart-send").href = "https://wa.me/" + PHONE + "?text=" + encodeURIComponent(msg);
+}
+ 
+document.getElementById("search").addEventListener("input", e => {
+  query = e.target.value;
+  if(query) active = "All";
+  paint();
+});
+ 
+document.querySelectorAll(".cat").forEach(a => {
+  a.addEventListener("click", () => { active = a.dataset.cat; query = ""; document.getElementById("search").value = ""; paint(); });
+});
+ 
+const val = id => document.getElementById(id).value.trim();
+ 
+document.getElementById("ck-send").addEventListener("click", e => {
+  e.preventDefault();
+  const msg =
+    "Cake order — Gupta Bakery\n" +
+    "Name: " + (val("ck-name") || "—") + "\n" +
+    "Phone: " + (val("ck-phone") || "—") + "\n" +
+    "Flavour: " + val("ck-flavour") + "\n" +
+    "Weight: " + val("ck-weight") + "\n" +
+    "Type: " + val("ck-egg") + "\n" +
+    "Pick-up: " + (val("ck-date") ? new Date(val("ck-date")).toLocaleString("en-IN") : "to be confirmed") + "\n" +
+    "Message on cake: " + (val("ck-msg") || "—") +
+    (val("ck-notes") ? "\nNotes: " + val("ck-notes") : "");
+  window.open("https://wa.me/" + PHONE + "?text=" + encodeURIComponent(msg), "_blank", "noopener");
+});
+ 
+document.getElementById("c-send").addEventListener("click", e => {
+  e.preventDefault();
+  const msg = "Hi Gupta Bakery,\n" + (val("c-msg") || "I have a question.") +
+    "\n\n— " + (val("c-name") || "A customer") + (val("c-phone") ? " (" + val("c-phone") + ")" : "");
+  window.open("https://wa.me/" + PHONE + "?text=" + encodeURIComponent(msg), "_blank", "noopener");
+});
+ 
+(function status(){
+  const now = new Date();
+  const mins = now.getHours() * 60 + now.getMinutes();
+  const open = mins >= 540 && mins < 1380;
+  const dot = document.getElementById("dot");
+  const txt = document.getElementById("statusText");
+  if(open){ txt.textContent = "Open now · till 11:00 pm"; }
+  else { dot.classList.add("shut"); txt.textContent = "Closed · opens 9:00 am"; }
+})();
+ 
+document.querySelectorAll("[data-art]").forEach(el => {
+  el.insertAdjacentHTML("afterbegin", art(el.dataset.art, el.dataset.pal));
+});
+ 
+document.getElementById("yr").textContent = new Date().getFullYear();
+paint();
+</script>
+</body>
+</html>
+ 
